@@ -22,8 +22,10 @@ maxb = max(blue);
 minb = min(blue);
 blue = (maxb - blue) / (maxb - minb) * (imgH -1) + 1;
 blue = round(blue);
+% 把x映射到图片的宽
 x = 1 : imgW;
 for i = 1: imgW
+    %绘制每个像素点的颜色
     img(red(i),x(i),2) = 0;
     img(red(i),x(i),3) = 0;
     img(green(i),x(i),1) = 0;
@@ -31,6 +33,6 @@ for i = 1: imgW
     img(blue(i),x(i),1) = 0;
     img(blue(i),x(i),2) = 0;
 end
-
-imshow(img);
+imwrite(img,'function.png');
+%imshow(img);
 end
