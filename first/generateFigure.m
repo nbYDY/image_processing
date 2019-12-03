@@ -34,5 +34,5 @@ for i = 1: imgW
     img(blue(i),x(i),2) = 0;
 end
 imwrite(img,'function.png');
-%imshow(img);
+imshow(img);
 end
